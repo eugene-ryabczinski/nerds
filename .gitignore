@@ -1,0 +1,6 @@
+*.psd
+*.json
+node_modules/
+npm-debug.*
+Thumbs.db
+

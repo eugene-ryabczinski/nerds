@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/web/roboto.woff") format("woff"), url("../fonts/web/roboto.woff2") format("woff2");
+}
+
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/web/robotomedium.woff") format("woff"), url("../fonts/web/robotomedium.woff") format("woff");
+}
+
+@font-face {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/web/robotobold.woff") format("woff"), url("../fonts/web/robotomedium.woff") format("woff");
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+    color: black;
+    background-color: white;
+}
+
+.container {
+    width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+.main-header {
+    padding-top: 50px;
+    background-color: #eeeeee;
+}
+
+.main-header__wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.main-header__logo {
+    display: inline-block;
+    font-size: 0;
+    background-color: red;
+}
+
+.main-header__navigation {
+    margin-left: 200px;
+}
+
+.main-header__cart {
+    margin-left: auto;
+}
+
+.site-navigation {
+    width: 600px;
+}
+
+.site-navigation__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-navigation__item {
+    margin-right: 50px;
+}
+
+.site-navigation__item:last-child {
+    margin-right: 0;
+}
+
+.site-navigation__link, .cart-link {
+    display: block;
+    padding: 10px 0;
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 500;
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.site-navigation__link:hover, .cart-link:hover, .site-navigation__link:focus, .cart-link:focus {
+    color: #fb565a;
+}
+
+.site-navigation__link:active, .cart-link:active {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.cart-link {
+    padding-left: 42px;
+}
+
+.cart-link::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    background: url("../img/icon-cart.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.site-navigation__link--active,
+.cart-link--active {
+    content: '';
+    position: absolute;
+}
