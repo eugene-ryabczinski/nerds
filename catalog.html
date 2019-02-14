@@ -9,16 +9,18 @@
 <body>
 	<header class="main-header">
 		<div class="main-header__wrapper container">
-			<a href="" class="main-header__logo">Логотип</a>
+			<a href="" class="main-header__logo">
+				<img class="main-header__logo-image" src="img/nerds-logo.png" width="160" height="65" alt="Логотип Nerds">
+			</a>
 			<nav class="main-header__navigation site-navigation">
 				<ul class="site-navigation__list">
 					<li class="site-navigation__item"><a href="" class="site-navigation__link">Студия</a></li>
 					<li class="site-navigation__item"><a href="" class="site-navigation__link">Клиенты</a></li>
-					<li class="site-navigation__item"><a href="" class="site-navigation__link">Магазин</a></li>
+					<li class="site-navigation__item"><a href="" class="site-navigation__link site-navigation__link--active">Магазин</a></li>
 					<li class="site-navigation__item"><a href="" class="site-navigation__link">Контакты</a></li>
+					<li class="site-navigation__item site-navigation__item--cart"><a href="" class="site-navigation__link site-navigation__link--cart">Корзина</a></li>
 				</ul>
 			</nav>
-			<a href="" class="main-header__cart cart-link">Корзина</a>
 		</div>
 	</header>
 	<main class="page-inner">
@@ -26,43 +28,43 @@
 			<h1 class="page-inner__title">Магазин готовых шаблонов</h1>			
 		</div>
 		<section class="catalog">
-			<div class="catalog__columns">
+			<div class="catalog__columns container">
 				<section class="filter">
 					<form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
 						<fieldset class="filter__fieldset">
-							<legend class="filter__title">Стоимость</legend>
+							<legend class="filter__title">Стоимость:</legend>
 							<div class="range-filter">
 								<div class="range-filter__controls">
 									<div class="range-filter__scale">
 										<div class="range-filter__bar"></div>
-										<div class="range-filter__handle range-filter__handle--min"></div>
-										<div class="range-filter__handle range-filter__handle--max"></div>
-									</div>
-									<div class="range-filter__price-controls">
-										<label class="range-filter__price">
-											<input type="text" class="range-filter__input range-filter__input--price">
-										</label>
-										<label class="range-filter__price">
-											<input type="text" class="range-filter__input range-filter__input--price">
-										</label>
-									</div>
+									</div>	
+									<div class="range-filter__handle range-filter__handle--min"></div>
+									<div class="range-filter__handle range-filter__handle--max"></div>
 								</div>
+								<div class="range-filter__price-controls">
+									<label class="range-filter__price">От
+										<input type="text" value="0" class="range-filter__input range-filter__input--price">
+									</label>
+									<label class="range-filter__price"> До
+										<input type="text" value="15 000" class="range-filter__input range-filter__input--price">
+									</label>
+								</div>								
 							</div>
 						</fieldset>
 						<fieldset class="filter__fieldset">
 							<legend class="filter__title">Сетка</legend>
 							<ul class="filter__list">
 								<li class="filter__option">
-									<input class="filter__radio" type="radio" id="adaptive" name="grid" value="adaptive">
-									<label for="adaptive">Адаптивная</label>
+									<input class="filter__radio visually-hidden" type="radio" id="adaptive" name="grid" value="adaptive">
+									<label class="filter__label filter__label--radio" for="adaptive">Адаптивная</label>
 								</li>
 								<li class="filter__option">
-									<input class="filter__radio" type="radio" id="fixed" name="grid" value="fixed">
-									<label for="fixed">Фиксированная</label>
+									<input class="filter__radio visually-hidden" type="radio" id="fixed" name="grid" value="fixed">
+									<label class="filter__label filter__label--radio" for="fixed">Фиксированная</label>
 								</li>
 								<li class="filter__option">
-									<input class="filter__radio" type="radio" id="responsive" name="grid" value="responsive">
-									<label for="responsive">Резиновая</label>
+									<input class="filter__radio visually-hidden" type="radio" id="responsive" name="grid" value="responsive" disabled>
+									<label class="filter__label filter__label--radio" for="responsive">Резиновая</label>
 								</li>
 							</ul>
 						</fieldset>
@@ -70,86 +72,118 @@
 							<legend class="filter__title">Сетка</legend>
 							<ul class="filter__list">
 								<li class="filter__option">
-									<input class="filter__checkbox" type="checkbox" id="slider" name="features" value="slider">
-									<label for="slider">Слайдер</label>
+									<input class="filter__checkbox visually-hidden" type="checkbox" id="slider" name="features" value="slider">
+									<label class="filter__label filter__label--checkbox" for="slider">Слайдер</label>
 								</li>
 								<li class="filter__option">
-									<input class="filter__checkbox" type="checkbox" id="features" name="features" value="features">
-									<label for="features">Блок преимуществ</label>
+									<input class="filter__checkbox visually-hidden" type="checkbox" id="features" name="features" value="features" checked>
+									<label class="filter__label filter__label--checkbox" for="features">Блок преимуществ</label>
 								</li>
 								<li class="filter__option">
-									<input class="filter__checkbox" type="checkbox" id="news" name="features" value="news">
-									<label for="news">Новости</label>
+									<input class="filter__checkbox visually-hidden" type="checkbox" id="news" name="features" value="news" disabled>
+									<label class="filter__label filter__label--checkbox" for="news">Новости</label>
 								</li>
 								<li class="filter__option">
-									<input class="filter__checkbox" type="checkbox" id="gallery" name="features" value="gallery">
-									<label for="gallery">Галерея</label>
+									<input class="filter__checkbox visually-hidden" type="checkbox" id="gallery" name="features" value="gallery" checked>
+									<label class="filter__label filter__label--checkbox" for="gallery">Галерея</label>
 								</li>
 								<li class="filter__option">
-									<input class="filter__checkbox" type="checkbox" id="cart" name="features" value="cart">
-									<label for="cart">Корзина</label>
+									<input class="filter__checkbox visually-hidden" type="checkbox" id="cart" name="features" value="cart">
+									<label class="filter__label filter__label--checkbox" for="cart">Корзина</label>
 								</li>
 							</ul>
 						</fieldset>	
-						<button type="filter__submit">ОК</button>					
+						<button type="submit" class="filter__submit site-link">ОК</button>					
 					</form>
 				</section>
-				<section class="catalog">
+				<section class="templates">
 					<section class="sorter">
 						<h3 class="sorter__title">Сортировать:</h3>
 						<ul class="sorter__list">
-							<li class="sorter__item"><a href="" class="sorter__link">По цене</a></li>
+							<li class="sorter__item"><a href="" class="sorter__link sorter__link--active">По цене</a></li>
 							<li class="sorter__item"><a href="" class="sorter__link">По типу</a></li>
 							<li class="sorter__item"><a href="" class="sorter__link">По названию</a></li>
 						</ul>
 						<div class="sorter__directions sorter-directions"> <!-- подумай ещё нужно ли блок-->
-							<a href="" class="sorter-directions__link sorter-directions__link--up">Верх</a>
-							<a href="" class="sorter-directions__link sorter-directions__link--down">Низ</a>
+							<a href="" class="sorter-directions__link sorter-directions__link--down sorter-directions__link--active" aria-label="вниз"></a>
+							<a href="" class="sorter-directions__link sorter-directions__link--up" aria-label="вверх"></a>
 						</div>
 					</section>
-					<section class="templates">
-						<ul class="templates__list">
+					<ul class="templates__list">
 							<li class="templates__item">
 								<div class="templates__image-wrappger">
-									<img src="" alt="" class="templates__image">
+									<img src="img/templ-sedona.jpg" width="360" height="576" alt="Шаблон" class="templates__image">
 								</div>
 								<div class="templates__hover-wrapper">
 									<h3 class="templters__title">Sedona</h3>
 									<p class="templates__description">Информационный сайт для туристов</p>
-									<a href="" class="templates__price-link">9000</a>
+									<a href="" class="templates__price-link site-link">9000</a>
+								</div>
+							</li>
+							<li class="templates__item">
+								<div class="templates__image-wrappger">
+									<img src="img/templ-pink.jpg" alt="Шаблон" class="templates__image">
+								</div>
+								<div class="templates__hover-wrapper">
+									<h3 class="templters__title">Pink up</h3>
+									<p class="templates__description">Продуктовый лендинг приложения для iOS и Android</p>
+									<a href="" class="templates__price-link site-link">9000</a>
 								</div>
 							</li>
 						</ul>
-						<ul class="pagination">
-							<li class="pagination__item"><a href="" class="pagination__link">1</a></li>
-							<li class="pagination__item"><a href="" class="pagination__link">2</a></li>
-							<li class="pagination__item"><a href="" class="pagination__link">3</a></li>
-							<li class="pagination__item"><a href="" class="pagination__link pagination__next">Следующая</a></li>
-						</ul>
-					</section>
-				</section>
+					<ul class="pagination">
+						<li class="pagination__item"><a class="pagination__link pagination__link--active">1025</a></li>
+						<li class="pagination__item"><a href="" class="pagination__link">2</a></li>
+						<li class="pagination__item"><a href="" class="pagination__link">3</a></li>
+						<li class="pagination__item"><a href="" class="pagination__link pagination__link--next">Следующая</a></li>
+					</ul>
+				</section> <!-- end templates -->
 			</div> <!-- end catalog__columns -->
 		</section> <!-- end catalog -->
 		<section class="contacts">
-			<div class="map">Карта</div>
-			<section class="address">
-				<h3 class="address__title">Nerds design studio</h3>
-				<p class="address__text">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
-				<a href="" class="addres__text">тел. +7 (812) 275-75-75</a>
-				<a href="" class="address__feedback-link">Напишите нам</a>
-			</section>
+			<div class="map"></div>
+			<div class="container">
+				<section class="address">
+					<h3 class="address__title">Nerds design studio</h3>
+					<p class="address__text">191186, Санкт-Петербург, <br>ул. Б. Конюшенная, д. 19/8</p>
+					<a href="tel:7-812-275-75-75" class="address__phone">тел. +7 (812) 275-75-75</a>
+					<a href="" class="address__feedback-link site-link">Напишите нам</a>
+				</section>
+			</div>
 		</section>
 	</main>
-	<footer class="main-footer">
+	<footer class="main-footer container">
 		<ul class="main-footer__social social">
-			<li class="social-item"><a href="" class="social__link">Вк</a></li>
-			<li class="social-item"><a href="" class="social__link">F</a></li>
-			<li class="social-item"><a href="" class="social__link">Inst</a></li>
+			<li class="social__item"><a href="#" class="social__link social__link--vk" aria-label="Vk"></a></li>
+			<li class="social__item"><a href="#" class="social__link social__link--facebook" aria-label="Facebook"></a></li>
+			<li class="social__item"><a href="#" class="social__link social__link--instagram" aria-label="Instagram"></a></li>
 		</ul>
 		<div class="main-footer__offers">
 			<b class="main-footer__offers-title">Давайте дружить, это выгодно!</b>
 			<p class="main-footer__offers-summary">Скидка 10% для друзей из социальных сетей</p>
 		</div>
-	</footer>	</main>
+	</footer>
+	<section class="modal feedback container">
+		<h2 class="feedback__title">Напишите нам</h2>
+		<button class="modal__close feedback__close"></button>
+		<form class="feedback__form" action="https://echo.htmlacademy.ru" method="post">
+			<p class="feedback__input-wrapper">
+				<label class="feedback__label">Ваше имя
+					<input type="text" class="feedback__input" name="name" placeholder="Имя Фамилия" required>
+				</label>
+			</p>
+			<p class="feedback__input-wrapper">
+				<label class="feedback__label">Ваш e-mail
+					<input type="email" class="feedback__input" name="email" placeholder="email@example.com" required>
+				</label>
+			</p>
+			<p class="feedback__input-wrapper">
+				<label class="feedback__label">Текст письма
+					<textarea class="feedback__input feedback__textarea" cols="30" rows="5" name="message" placeholder="В свободной форме"></textarea>
+				</label>	
+			</p>
+			<button class="feedback__submit site-link" type="submit">OK</button>
+		</form>
+	</section>
 </body>
 </html>
