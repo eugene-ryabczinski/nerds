@@ -19,49 +19,8 @@
 	src: url('../fonts/web/robotobold.woff') format('woff'), url('../fonts/web/robotomedium.woff') format('woff');
 }
 
-$background-color--primary: #eeeeee;
-
-$text-color--primary: #000000;
-$text-color--secondary: #666666;
-
-$color-corporate-red: #fb565a;
-$color-corporate-red--hover: #e74246;
-$color-corporate-red--active: #d7373b;
-
-$color-corporate-green: #00ca74;
-$color-corporate-green--hover: #00bc6a;
-$color-corporate-green--active: #00aa62;
-
-$color-corporate-yellow: #efc849;
-$color-corporate-yellow--hover: #eab534;
-$color-corporate-yellow--active: #e5a722;
-
-$color-corporate-grey: #eeeeee;
-$color-corporate-grey--hover: #dfdfdf;
-$color-corporate-grey--active: #d5d5d5;
-
-@mixin backgroung-icon($image) {
-	background-image: url($image);
-	background-repeat: no-repeat;
-	background-position: center center;
-}
-
-@mixin section-divider() {
-	position: relative;
-//	border-bottom: 2px solid #eeeeee;
-	&::after {
-		content: '';
-		
-		position: absolute;
-		bottom: 0;
-		
-		left:20px;
-		right: 20px;
-		
-		height: 2px;
-		background-color: #eeeeee;
-	}
-}
+@import "variables";
+@import "mixins";
 
 body {
 	margin: 0;

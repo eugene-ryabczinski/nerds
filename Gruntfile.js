@@ -12,16 +12,17 @@ module.exports = function(grunt) {
 	        },
 	        dist: {
 	            files: {
-	                'css/style.css': 'css/style.scss'
+	                'css/style.css': 'sass/style.scss'
 	            }
 	        }
 	    },
+	    
         watch: {
             options: {
                 spawn: false
             },
             scripts: {
-                files: ['css/*.scss'],
+                files: ['sass/*.scss'],
                 tasks: ['sass']
             }
         }
